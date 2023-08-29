@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+
+  body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #B1B3A2;
+  }
+   
+        h1 {
+            text-align: center;
+        }
+
+  .football {
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #109EE0;
+    border-radius: 50%;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    animation: spin 3s infinite linear;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .hexagon {
+    width: 70px;
+    height: 40px;
+    background-color: #E01039;
+    clip-path: polygon(
+      50% 0%, 100% 25%,
+      100% 75%, 50% 100%,
+      0% 75%, 0% 25%
+    );
+    .eyes {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    z-index: 10;
+    margin-top: 30%;
+}
+
+    position: absolute;
+    top: 30px;
+    left: 40px;
+  }
+
+  @keyframes spin {
+    0% {
+      transform: rotate(0);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+</style>
+<title>Spinning Football Picture</title>
+</head>
+
+<h1><i> Spinning Ball</i> </h1>
+<body>
+  <div class="football">
+    <div class="hexagon">
+      
+    </div>
+  </div>
+</body>
+</html>
